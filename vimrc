@@ -11,10 +11,10 @@ Plugin 'epage/vim-autohighlight'
 Plugin 'tpope/vim-sensible'
 Plugin 'Yggdroot/indentLine'
 Plugin 'ciaranm/inkpot'
-Plugin 'Valloric/YouCompleteMe'
+"Plugin 'Valloric/YouCompleteMe'
 "Plugin 'rdnetto/YCM-Generator'
 Plugin 'ervandew/eclim'
-Plugin 'kien/rainbow_parentheses.vim'
+Plugin 'luochen1990/rainbow'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'junegunn/seoul256.vim'
 Plugin 'kien/ctrlp.vim'
@@ -25,6 +25,9 @@ Plugin 'lokaltog/vim-distinguished'
 Plugin 'rust-lang/rust.vim'
 Plugin 'jpalardy/spacehi.vim'
 "Plugin 'scrooloose/nerdtree'
+
+
+let g:rainbow_active = 1
 
 call vundle#end()
 filetype plugin indent on
@@ -58,6 +61,10 @@ set backupskip=/tmp/*
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set writebackup
 
+"mark column 80 to provide a visual aid in obeying to the 80 characters per
+"line rule
+set colorcolumn=80
+
 "turn off search highlight
 nnoremap <leader><space> :nohlsearch
 "open/close folding
@@ -65,24 +72,8 @@ nnoremap <space> za
 "save session
 nnoremap <leader>s :mksession<CR>
 
-
-au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
-au Syntax * RainbowParenthesesLoadChevrons
-
-"syntastic
-" set statusline+=%#warningmsg#
-" set statusline+=%{SyntasticStatuslineFlag()}
-" set statusline+=%*
-" let g:syntastic_always_populate_loc_list = 1
-" let g:syntastic_auto_loc_list = 1
-" let g:syntastic_check_on_open = 1
-" let g:syntastic_check_on_wq = 0
-
 map <C-J> <C-W>j<C-W>
 map <C-K> <C-W>k<C-W>
 
-highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-match OverLength /\%80v.\+/
+"highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+"match OverLength /\%80v.\+/
