@@ -11,8 +11,6 @@ Plugin 'epage/vim-autohighlight'
 Plugin 'tpope/vim-sensible'
 Plugin 'Yggdroot/indentLine'
 Plugin 'ciaranm/inkpot'
-"Plugin 'Valloric/YouCompleteMe'
-"Plugin 'rdnetto/YCM-Generator'
 Plugin 'ervandew/eclim'
 Plugin 'luochen1990/rainbow'
 Plugin 'tomtom/tcomment_vim'
@@ -24,7 +22,11 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'lokaltog/vim-distinguished'
 Plugin 'rust-lang/rust.vim'
 Plugin 'jpalardy/spacehi.vim'
+
+"plugins for later learning and use
 "Plugin 'scrooloose/nerdtree'
+"Plugin 'Valloric/YouCompleteMe'
+"Plugin 'rdnetto/YCM-Generator'
 
 
 let g:rainbow_active = 1
