@@ -35,7 +35,7 @@ filetype plugin indent on
 
 syntax enable
 set bg=dark
-let g:solarized_termcolors=256
+"let g:solarized_termcolors=256
 "let g:solarized_termtrans=1
 colorscheme seoul256
 set number
