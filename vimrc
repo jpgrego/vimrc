@@ -38,19 +38,35 @@ set bg=dark
 "let g:solarized_termcolors=256
 "let g:solarized_termtrans=1
 colorscheme seoul256
-set number
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
-set expandtab
-set smartindent
+set number                                  " show line numbers
+set linebreak                               " break lines at word
+set showbreak=+++                           " wrap-broken line prefix
+set textwidth=80                            " line wrap (number of cols)
+set showmatch                               " highlight matching brace
+set visualbell                              " use visual bell (no beeping)
+
+set hlsearch                                " highlight all search results
+set smartcase                               " enable smart-case search
+set ignorecase                              " always case-insensitive
+set incsearch                               " searches for strings
+                                            " incrementally
+                                            
+set autoindent                              " auto-indent new lines
+set cindent                                 " use "C" style program indenting
+set shiftwidth=4                            " number of auto-indent spaces
+set smartindent                             " enable smart-indent
+set smarttab                                " enable smart-tabs
+set softtabstop=4                           " number of spaces per tab
+
+
+set ruler                                   " show row and column information
+set undolevels=1000                         " number of undo levels
+set backspace=indent,eol,start              " backspace behaviour
+
 set showcmd
-set cursorline
+set cursorline                              
 set wildmenu
 set lazyredraw
-set showmatch
-set incsearch
-set hlsearch
 set foldenable
 set foldlevelstart=10
 set foldnestmax=10
